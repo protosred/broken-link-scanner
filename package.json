@@ -1,0 +1,24 @@
+{
+  "name": "broken-link-scanner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "pkg . --targets win --output bin/win32/broken-link-scanner.exe && pkg . --targets macos --output bin/macos/broken-link-scanner && pkg . --targets linux --output bin/linux/broken-link-scanner",
+    "make-zip": "zip -r source-code.zip . -x \"node_modules/**\" -x \"bin/**\" -x \"*.csv\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": "bin.js",
+  "dependencies": {
+    "batchflow": "^0.4.0",
+    "cheerio": "^1.0.0-rc.3",
+    "fast-csv": "^2.5.0",
+    "inquirer": "^6.3.1",
+    "listr": "^0.14.3",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7",
+    "rxjs": "^6.5.1"
+  }
+}
